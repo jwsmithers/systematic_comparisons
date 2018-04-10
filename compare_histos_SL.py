@@ -104,7 +104,7 @@ def make_ratio(nom,up,down,channel):
   channel_label.SetTextAlign(12);
   channel_label.SetTextFont(63);
   channel_label.SetTextSizePixels(15);
-  channel_label.DrawLatex(0.5,0.89, channel);
+  channel_label.DrawLatex(0.45,0.89, channel);
   channel_label.Draw("same")
   return ratio1, ratio2, line, channel_label
 
@@ -219,22 +219,10 @@ def plot_histos(process):
   
     pad2.cd()
     r1=make_ratio(nom_h_ejets,up_h_ejets,down_h_ejets,"e+jets")
-    r1[0].Draw("same hist")
-    r1[1].Draw("same hist")
-    r1[2].Draw("same")
-    r1[3].Draw("same")
     pad3.cd()
     r2=make_ratio(nom_h_mujets,up_h_mujets,down_h_mujets,"#mu+jets")
-    r2[0].Draw("same hist")
-    r2[1].Draw("same hist")
-    r2[2].Draw("same")
-    r2[3].Draw("same")
     pad4.cd()
     r3=make_ratio(nom_h_singlelepton,up_h_singlelepton,down_h_singlelepton,"single lepton")
-    r3[0].Draw("same hist")
-    r3[1].Draw("same hist")
-    r3[2].Draw("same")
-    r3[3].Draw("same")
  
 
     if not os.path.exists("histos/"+process+"/"):
