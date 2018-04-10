@@ -114,7 +114,7 @@ def plot_histos(process):
     f_mujets = TFile.Open(mujets_path+mujets_root_file, 'read')
     f_SL = TFile.Open(singlelepton_path+singlelepton_root_file, 'read')
     c1 = TCanvas( 'c1', 'Histogram Drawing Options', 0,0,800,800 )
-    pad1 = TPad("pad1", "pad1", 0, 0.48, 1, 1.0)
+    pad1 = TPad("pad1", "pad1", 0, 0.49, 1, 1.0)
     pad1.SetBottomMargin(0)  # joins upper and lower plot
     pad1.Draw()
     pad2 = TPad("pad2", "pad2", 0, 0.37, 1, 0.49)
@@ -256,9 +256,10 @@ def main(Process):
     len(mujets_down)==len(singlelepton_up)==len(singlelepton_down)
   plot_histos(Process)
   
-#main("ttphoton")
+main("ttphoton")
 #main("QCD")
 #main("Wphoton")
 #main("electronfakes")
-main("hadronfakes")
+#main("hadronfakes")
+#main("Other")
 
